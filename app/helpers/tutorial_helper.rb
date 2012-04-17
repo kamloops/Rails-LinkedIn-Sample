@@ -39,8 +39,7 @@ module TutorialHelper
             
       # Write to logged in user's share feed
       puts "\nWrite to Logged In User's Share Feed"
-      xml = static_xml
-      response = @access_token.post("http://api.linkedin.com/v1/people/~/shares", xml, {'Content-Type'=>'application/xml'})
+      response = @access_token.post("http://api.linkedin.com/v1/people/~/shares", static_xml, {'Content-Type'=>'application/xml'})
       puts response
       
     end

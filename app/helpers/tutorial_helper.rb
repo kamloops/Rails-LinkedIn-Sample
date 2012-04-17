@@ -40,8 +40,8 @@ module TutorialHelper
   
   def authorize
     # The following auth values belong in the config, but for the sake of this exercise will be hard coded
-    api_key = 'qnh4vihktveo'
-    api_secret = '2iSmiNnSaH0Bb3Nb'
+    api_key = 'XXXXXXXXXX'
+    api_secret = 'XXXXXXXXXXXX'
     configuration = { :site => 'https://api.linkedin.com',
                          :authorize_path => 'https://api.linkedin.com/uas/oauth/authorize',
                          :request_token_path => 'https://api.linkedin.com/uas/oauth/requestToken',

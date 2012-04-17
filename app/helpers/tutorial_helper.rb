@@ -26,6 +26,16 @@ module TutorialHelper
       puts "\nGet Job Titles of All Connections"
       response = @access_token.get("http://api.linkedin.com/v1/people/~/connections:(id,first-name,last-name,positions:(title))")
       puts response
+      
+      # Searches for companies using "Maple" and "Leaf" as search parameters
+      puts "\nSearch for companies using Maple and Leaf as keywords"
+      response = @access_token.get("http://api.linkedin.com/v1/company-search?keywords=maple&leaf")
+      puts response
+      
+      # Gets 50 network updates along with pictures for logged in user using query parameters
+      puts "\nGet Network Updates using query parameters"
+      response = @access_token.get("http://api.linkedin.com/v1/people/~/network/updates?type=STAT&type=PICT&count=50&start=50")
+      puts response
             
       # Write to logged in user's share feed
       puts "\nWrite to Logged In User's Share Feed"

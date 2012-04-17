@@ -82,8 +82,8 @@ module TutorialHelper
       # Write access token and secret to file
       file = File.new("service.dat", "r+")
       if file
-        aFile.syswrite(@access_token.token)
-        aFile.syswrite(@access_token.secret)
+        file.syswrite(@access_token.token)
+        file.syswrite(@access_token.secret)
       end
     end  
   end
